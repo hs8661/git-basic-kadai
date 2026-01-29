@@ -1,0 +1,41 @@
+suzukihiroko@suzukihirokonoMacBook-Pro Desktop % mkdir git_challenge
+suzukihiroko@suzukihirokonoMacBook-Pro Desktop % cd git_challenge
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /Users/suzukihiroko/Desktop/git_challenge/.git/
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % ls -a
+.	..	.git
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % touch hello_world.txt
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % ls
+hello_world.txt
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % echo Hello,world! > hello_world.txt
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % cat hello_world.txt
+Hello,world!
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % git add hello_world.txt
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % git commit -m Add_Hello_world
+[master (root-commit) 5256240] Add_Hello_world
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % echo こんにちは、世界！ >> hello_world.txt
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % cat hello_world.txt
+Hello,world!
+こんにちは、世界！
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % git add hello_world.txt
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % git commit -m Add_こんにちは、世界！
+[master 13c2c6e] Add_こんにちは、世界！
+ 1 file changed, 1 insertion(+)
+suzukihiroko@suzukihirokonoMacBook-Pro git_challenge % git log --oneline
+13c2c6e (HEAD -> master) Add_こんにちは、世界！
+5256240 Add_Hello_world
